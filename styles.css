@@ -1,6 +1,6 @@
 :root {
     --primary: #0066cc;
-    --secondary: #00b386;
+    --secondary: #0098b3;
     --bg: #f4faff;
     --text: #333;
   }
@@ -19,7 +19,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 50px;
+    padding: 15px 40px;
   }
   
   header .logo {
@@ -30,14 +30,14 @@
   nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 30px;
     margin: 0;
   }
   
   nav ul li a {
     color: white;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 400;
   }
   
   .btn {
@@ -52,17 +52,17 @@
   }
   
   .btn:hover {
-    background: #009970;
+    background: #008799;
   }
   
   .btn.small {
-    padding: 8px 14px;
-    font-size: 14px;
+    padding: 10px 15px;
+    font-size: 10px;
   }
   
   /* ================== HERO ================== */
   .hero {
-    background: url("img/doctor.jpg") no-repeat center center/cover;
+    background: url("https://previews.123rf.com/images/edhar/edhar1803/edhar180302762/96870484-bottom-view-a-team-of-doctors-at-the-medical-center-clasped-their-hands-together.jpg") no-repeat center center/cover;
     height: 70vh;
     display: flex;
     align-items: center;
@@ -214,4 +214,6 @@
     margin-top: 0;
     color: var(--primary);
   }
+ 
+  
   
