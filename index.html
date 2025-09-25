@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keralty Clone · Citas</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/a2d045df6d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Encabezado -->
+  <header>
+    <div class="logo">🌿 Med Tech</div>
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#citas">Agendar Cita</a></li>
+        <li><a href="#historial">Historial</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Tu salud es lo más importante</h1>
+      <p>Accede a consultas médicas rápidas, seguras y confiables.</p>
+      <a href="#citas" class="btn">Agendar Cita</a>
+    </div>
+  </section>
+
+  <!-- Servicios -->
+  <section class="services" id="servicios">
+    <h2>Servicios Médicos</h2>
+    <div class="grid">
+      <div class="card">
+        <i class="fas fa-stethoscope"></i>
+        <h3>Medicina General</h3>
+        <p>Atención integral para todas las edades.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-tooth"></i>
+        <h3>Odontología</h3>
+        <p>Tratamientos dentales modernos y seguros.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-baby"></i>
+        <h3>Pediatría</h3>
+        <p>Cuidado especializado para los más pequeños.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-tooth"></i>
+        <h3>Psicologia</h3>
+        <p>Cuidamos de tu salud mental.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-tooth"></i>
+        <h3>Optometria</h3>
+        <p>Cuida la salud de tus ojos</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-tooth"></i>
+        <h3>Psiquiatria</h3>
+        <p>Tratamientos seguros para tu mente</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-tooth"></i>
+        <h3>Fisioterapia</h3>
+        <p>Cuidamos de ti.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulario de citas -->
+  <section class="panel" id="citas">
+    <h2>Agendar Cita</h2>
+    <form id="form-cita">
+      <label>Nombre del paciente:</label>
+      <input type="text" id="paciente" required>
+
+      <label>Especialidad:</label>
+      <select id="especialidad">
+        <option>Medicina General</option>
+        <option>Pediatría</option>
+        <option>Odontología</option>
+        <option>Psicología</option>
+        <option>Optometria</option>
+        <option>Fisioterapia</option>
+        <option>Psiquiatria</option>
+      </select>
+
+      <label>Motivo de consulta:</label>
+      <input type="text" id="motivo" placeholder="Ej: revisión, dolor, chequeo...">
+
+      <label>Zona geográfica:</label>
+      <select id="zona">
+        <option value="Florencia">Florencia</option>
+        <option value="norte">Norte</option>
+        <option value="sur">Sur</option>
+        <option value="sur">Sur</option>
+      </select>
+
+      <label>Fecha y hora:</label>
+      <input type="datetime-local" id="fecha" required>
+
+      <button type="submit">Agendar</button>
+    </form>
+    <p id="mensaje"></p>
+  </section>
+
+  <!-- Historial -->
+  <section class="panel" id="historial">
+    <h2>Historial de Citas</h2>
+    <ul id="lista-citas"></ul>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Keralty Clone · Todos los derechos reservados</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
