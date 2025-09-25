@@ -1,3 +1,25 @@
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyD9u3ER8UE3QxR6JbiJPfxr1zS17N-4A8M",
+  authDomain: "medtech-72bf9.firebaseapp.com",
+  projectId: "medtech-72bf9",
+  storageBucket: "medtech-72bf9.firebasestorage.app",
+  messagingSenderId: "1016047080605",
+  appId: "1:1016047080605:web:2154dc9409794793e3f074",
+  measurementId: "G-9FQT62L1KD"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
 let citas = [];
 
 const form = document.getElementById("form-cita");
