@@ -1,0 +1,11 @@
+# Dependencias (Node.js)
+/node_modules
+
+# Archivos de registro y caché
+*.log
+npm-debug.log*
+yarn-error.log*
+.eslintcache
+
+# Archivos de configuración
+.vscode/
