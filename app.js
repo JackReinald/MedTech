@@ -46,6 +46,7 @@ const disponibilidadBase = [
 
   // Dra. Carla Díaz (201): Martes (2) de 11:00 a 13:00
   { medicoId: 201, diaSemana: 2, horaInicio: "11:00", horaFin: "13:00" },
+  { medicoId: 301, diaSemana: 4, horaInicio: "17:00", horaFin: "19:00" },
 ];
 
 // Duración estándar de la cita en minutos
