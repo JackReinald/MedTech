@@ -1,151 +1,175 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Med Tech · Plataforma Salud</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="https://kit.fontawesome.com/a2d045df6d.js" crossorigin="anonymous"></script>
-</head>
-<body>
-  <!-- ================== HEADER ================== -->
-  <header>
-    <div class="logo">🌿 MEDTECH </div>
-    <nav>
-      <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#citas">Agendar Cita</a></li>
-        <li><a href="#historial">Historial</a></li>
-      </ul>
-    </nav>
-    <button id="btn-login" class="btn small">Ingresar</button>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Med Tech · Plataforma Salud</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/a2d045df6d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- ================== HEADER ================== -->
+    <header>
+      <div class="logo">🌿 MEDTECH</div>
+      <nav>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#citas">Agendar Cita</a></li>
+          <li><a href="#historial">Historial</a></li>
+        </ul>
+      </nav>
 
-  <!-- ================== HERO ================== -->
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Tu salud, nuestra prioridad</h1>
-      <p>Agenda citas médicas de forma rápida y accede a resultados fácilmente.</p>
-      <a href="#citas" class="btn">Agendar Cita</a>
-    </div>
-  </section>
+      <div id="notif-bell">
+        <i class="fas fa-bell"></i>
+        <span id="notif-count" class="badge">0</span>
 
-
-
-  <!-- ================== SERVICIOS ================== -->
-  <section class="services" id="servicios">
-    <h2>Servicios Médicos</h2>
-    <div class="grid">
-      <div class="card">
-        <i class="fas fa-stethoscope"></i>
-        <h3>Medicina General</h3>
-        <p>Atención integral para el cuidado de tu salud.</p>
+        <div id="notif-panel" class="dropdown-panel">
+          <h4 style="margin-top: 0">Notificaciones</h4>
+          <ul id="notif-list"></ul>
+          <button
+            id="mark-all-read"
+            class="btn small"
+            style="width: 100%; margin-top: 10px"
+          >
+            Marcar todas como leídas
+          </button>
+        </div>
       </div>
-      <div class="card">
-        <i class="fas fa-tooth"></i>
-        <h3>Odontología</h3>
-        <p>Sonrisas saludables con tratamientos modernos.</p>
+      <button id="btn-login" class="btn small">Ingresar</button>
+    </header>
+
+    <!-- ================== HERO ================== -->
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Tu salud, nuestra prioridad</h1>
+        <p>
+          Agenda citas médicas de forma rápida y accede a resultados fácilmente.
+        </p>
+        <a href="#citas" class="btn">Agendar Cita</a>
       </div>
-      <div class="card">
-        <i class="fas fa-baby"></i>
-        <h3>Pediatría</h3>
-        <p>Cuidado especializado para los más pequeños.</p>
+    </section>
+
+    <!-- ================== SERVICIOS ================== -->
+    <section class="services" id="servicios">
+      <h2>Servicios Médicos</h2>
+      <div class="grid">
+        <div class="card">
+          <i class="fas fa-stethoscope"></i>
+          <h3>Medicina General</h3>
+          <p>Atención integral para el cuidado de tu salud.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-tooth"></i>
+          <h3>Odontología</h3>
+          <p>Sonrisas saludables con tratamientos modernos.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-baby"></i>
+          <h3>Pediatría</h3>
+          <p>Cuidado especializado para los más pequeños.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-baby"></i>
+          <h3>Psicologia</h3>
+          <p>Cuidado especializado para tu salud mental.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-baby"></i>
+          <h3>Optometria</h3>
+          <p>Cuidado especializado para tus ojos.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-baby"></i>
+          <h3>Fisioterapia</h3>
+          <p>Cuidado especializado para tu cuerpo.</p>
+        </div>
       </div>
-      <div class="card">
-        <i class="fas fa-baby"></i>
-        <h3>Psicologia</h3>
-        <p>Cuidado especializado para tu salud mental.</p>
-      </div>   
-      <div class="card">
-        <i class="fas fa-baby"></i>
-        <h3>Optometria</h3>
-        <p>Cuidado especializado para tus ojos.</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-baby"></i>
-        <h3>Fisioterapia</h3>
-        <p>Cuidado especializado para tu cuerpo.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ================== FORMULARIO DE CITAS ================== -->
-  <section class="panel" id="citas">
-    <h2>Agendar Cita</h2>
-    <form id="form-cita">
-      <label>Nombre del paciente:</label>
-      <input type="text" id="paciente" required>
+    <!-- ================== FORMULARIO DE CITAS ================== -->
+    <section class="panel" id="citas">
+      <h2>Agendar Cita</h2>
+      <form id="form-cita">
+        <label>Nombre del paciente:</label>
+        <input type="text" id="paciente" required />
 
-      <label>Especialidad:</label>
-      <select id="especialidad">
-        <option>Medicina General</option>
-        <option>Pediatría</option>
-        <option>Odontología</option>
-        <option>Psicología</option>
-        <option>Optometria</option>
-        <option>Fisioterapia</option>
-      </select>
+        <label>Especialidad:</label>
+        <select id="especialidad">
+          <option>Medicina General</option>
+          <option>Pediatría</option>
+          <option>Odontología</option>
+          <option>Psicología</option>
+          <option>Optometria</option>
+          <option>Fisioterapia</option>
+        </select>
 
-      <label>Motivo de consulta:</label>
-      <input type="text" id="motivo" placeholder="Ej: revisión, dolor, chequeo...">
+        <label>Motivo de consulta:</label>
+        <input
+          type="text"
+          id="motivo"
+          placeholder="Ej: revisión, dolor, chequeo..."
+        />
 
-      <label>Zona geográfica:</label>
-      <select id="zona">
-        <option value="centro">Centro</option>
-        <option value="norte">Norte</option>
-        <option value="sur">Sur</option>
-      </select>
+        <label>Zona geográfica:</label>
+        <select id="zona">
+          <option value="centro">Centro</option>
+          <option value="norte">Norte</option>
+          <option value="sur">Sur</option>
+        </select>
 
-      <label>Fecha y hora:</label>
-      <input type="datetime-local" id="fecha" required>
+        <label>Fecha y hora:</label>
+        <input type="datetime-local" id="fecha" required />
 
-      <button type="submit">Agendar</button>
-    </form>
-    <p id="mensaje"></p>
-  </section>
-  
-  <!-- ================== HISTORIAL ================== -->
-  <section class="panel" id="historial">
-    <h2>Historial de Citas</h2>
-    <ul id="lista-citas"></ul>
-  </section>
-
-  <!-- ================== FOOTER ================== -->
-  <footer>
-    <p>© 2025 Keralty Clone · Todos los derechos reservados</p>
-  </footer>
-
-  <!-- ================== MODAL LOGIN/REGISTER ================== -->
-  <div id="auth-modal" class="modal">
-    <div class="modal-content">
-      <span class="close" id="close-modal">&times;</span>
-      <h2 id="modal-title">Iniciar Sesión</h2>
-      
-      <!-- Login -->
-      <form id="login-form">
-        <label>Usuario</label>
-        <input type="text" id="login-user" required>
-        <label>Contraseña</label>
-        <input type="password" id="login-pass" required>
-        <button type="submit">Ingresar</button>
+        <button type="submit">Agendar</button>
       </form>
+      <p id="mensaje"></p>
+    </section>
 
-      <!-- Registro -->
-      <form id="register-form" style="display:none">
-        <label>Usuario</label>
-        <input type="text" id="reg-user" required>
-        <label>Contraseña</label>
-        <input type="password" id="reg-pass" required>
-        <button type="submit">Registrar</button>
-      </form>
+    <!-- ================== HISTORIAL ================== -->
+    <section class="panel" id="historial">
+      <h2>Historial de Citas</h2>
+      <ul id="lista-citas"></ul>
+    </section>
 
-      <p id="toggle-form">
-        ¿No tienes cuenta? <a href="#" id="link-register">Regístrate aquí</a>
-      </p>
+    <!-- ================== FOOTER ================== -->
+    <footer>
+      <p>© 2025 Keralty Clone · Todos los derechos reservados</p>
+    </footer>
+
+    <!-- ================== MODAL LOGIN/REGISTER ================== -->
+    <div id="auth-modal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="close-modal">&times;</span>
+        <h2 id="modal-title">Iniciar Sesión</h2>
+
+        <!-- Login -->
+        <form id="login-form">
+          <label>Usuario</label>
+          <input type="text" id="login-user" required />
+          <label>Contraseña</label>
+          <input type="password" id="login-pass" required />
+          <button type="submit">Ingresar</button>
+        </form>
+
+        <!-- Registro -->
+        <form id="register-form" style="display: none">
+          <label>Usuario</label>
+          <input type="text" id="reg-user" required />
+          <label>Contraseña</label>
+          <input type="password" id="reg-pass" required />
+          <button type="submit">Registrar</button>
+        </form>
+
+        <p id="toggle-form">
+          ¿No tienes cuenta? <a href="#" id="link-register">Regístrate aquí</a>
+        </p>
+      </div>
     </div>
-  </div>
 
-  <script type="module" src="app.js"></script>
-</body>
+    <script type="module" src="app.js"></script>
+  </body>
 </html>
