@@ -132,3 +132,5 @@ registerForm.addEventListener("submit", e => {
   loginForm.style.display = "block";
   modalTitle.textContent = "Iniciar Sesión";
 });
+
+  
